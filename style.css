@@ -1,0 +1,58 @@
+
+#dnd1
+{
+	width: 400px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#dnd1 li
+{
+	position: relative;
+	float: left;
+	z-index: 0;
+	
+	cursor: move;
+	
+	border: 1px solid black;
+	margin: 0 5px 5px 0;
+	height: 45px;
+	padding: 3px;
+	background-color: #fff;
+	text-align: center;
+	width: 30px;
+}
+#dnd1 #dnd1_order
+{
+	width: 20px;
+	display: block;
+}
+
+#dnd2
+{
+	width: 180px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#dnd2 li
+{
+	position: relative;
+	float: left;
+	z-index: 0;
+	
+	cursor: move;
+	
+	border: 1px solid black;
+	margin: 0 2px 2px 0;
+	height: 20px;
+	padding: 3px;
+	background-color: #fff;
+	text-align: center;
+	width: 30px;
+}
+#dnd2 #dnd2_order
+{
+	width: 20px;
+	display: block;
+}

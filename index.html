@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+	<title>Drag and Drop</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="Pavel Grim">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="googlebot" content="noindex, nofollow">
+	
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src="./draganddrop.js"></script>
+</head>
+<body>
+	<h1>Drag and Drop</h1>
+	<h2>Example 1</h2>
+	<form>
+		<ul id="dnd1">
+			<li name="a">A</li>
+			<li name="b">B</li>
+			<li name="c">C</li>
+			<li name="d">D</li>
+			<li name="e">E</li>
+			<li name="f">F</li>
+			<li name="g">G</li>
+			<li name="h">H</li>
+			<li name="i">I</li>
+			<li name="j">J</li>
+			<li name="k">K</li>
+			<li name="l">L</li>
+			<li name="m">M</li>
+			<li name="n">N</li>
+			<li name="o">O</li>
+			<li name="p">P</li>
+			<li name="q">Q</li>
+			<li name="r">R</li>
+			<li name="s">S</li>
+			<li name="t">T</li>
+			<li name="u">U</li>
+			<li name="v">V</li>
+			<li name="w">W</li>
+			<li name="x">X</li>
+			<li name="y">Y</li>
+			<li name="z">Z</li>
+		</ul>
+		<div style="clear: left;"></div>
+		<input type="text" id="dnd1_order" value="" />
+		<script type="text/javascript">
+			var dnd1 = new DragAndDrop("dnd1", "dnd1_order", 5, 5)
+			dnd1.MakeDragAble()
+		</script>
+	</form>
+	<h2>Example 2</h2>
+	<form>
+		<ul id="dnd2">
+			<li name="item_number_1">1</li>
+			<li name="2">2</li>
+			<li name="something">3</li>
+			<li name="bah">4</li>
+			<li name="item">5</li>
+			<li name="item6">6</li>
+			<li name="item7">7</li>
+			<li name="item8">8</li>
+			<li name="item9">9</li>
+			<li name="item0">0</li>
+		</ul>
+		<div style="clear: left;"></div>
+		<input type="text" id="dnd2_order" value="" />
+		<script type="text/javascript">
+			var dnd2 = new DragAndDrop("dnd2", "dnd2_order", 2, 2, true)
+			dnd2.MakeDragAble()
+		</script>
+	</form>
+	<script type="text/javascript">
+		document.onmousemove = function(event) {
+			dnd1.Drag(event);
+			dnd2.Drag(event);
+			return false;
+		}
+		document.onmouseup = function(event) {
+			dnd1.ReleaseDrag(event);
+			dnd2.ReleaseDrag(event);
+			return false;
+		}
+	</script>
+</body>
+</html>
